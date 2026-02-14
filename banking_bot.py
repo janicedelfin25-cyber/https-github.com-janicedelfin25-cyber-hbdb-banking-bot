@@ -10,9 +10,9 @@ client = Mistral(api_key=api_key)
 # Custom CSS styling - Purple theme with excellent readability
 custom_css = """
 <style>
-    /* Main background - Purple */
+    /* Main background - Lighter Purple */
     .stApp {
-        background: #5a3a7a;
+        background: #7a5a9a;
     }
     
     /* Chat message styling */
