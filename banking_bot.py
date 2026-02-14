@@ -7,12 +7,12 @@ import os
 api_key = "aM92yjrlBPbRPqOYKkNFBZnjXhU6R01y"
 client = Mistral(api_key=api_key)
 
-# Custom CSS styling - Eye-friendly theme
+# Custom CSS styling - Clean and Readable
 custom_css = """
 <style>
-    /* Main background - Soft light theme */
+    /* Main background - Clean white */
     .stApp {
-        background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+        background: #ffffff;
     }
     
     /* Chat message styling */
@@ -22,45 +22,45 @@ custom_css = """
         margin-bottom: 8px;
     }
     
-    /* User message - Soft blue */
+    /* User message - Light blue background */
     .stChatMessage[data-testid="user-message"] {
-        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-        color: #1565c0;
+        background: #e3f2fd;
+        color: #0d47a1;
         border-left: 4px solid #1976d2;
     }
     
-    /* Assistant message - Soft green */
+    /* Assistant message - Light green background */
     .stChatMessage[data-testid="assistant-message"] {
-        background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-        color: #2e7d32;
+        background: #f1f8e9;
+        color: #1b5e20;
         border-left: 4px solid #388e3c;
     }
     
     /* Input area */
     .stChatInput {
         border-radius: 12px;
-        border: 1px solid #b0bec5;
+        border: 1px solid #90caf9;
         background-color: #ffffff;
         padding: 12px;
+        color: #212121;
     }
     
-    /* Sidebar styling - Soft blue background */
+    /* Sidebar styling - Light background */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #eceff1 0%, #cfd8dc 100%);
-        color: #263238;
+        background: #f5f5f5;
+        color: #212121;
     }
     
     /* Headers */
     h1, h2, h3 {
-        color: #263238;
+        color: #1976d2;
         font-weight: 600;
-        text-shadow: none;
     }
     
     /* Button styling */
     .stButton > button {
-        background: linear-gradient(135deg, #90caf9 0%, #64b5f6 100%);
-        color: #263238;
+        background: #1976d2;
+        color: white;
         border: none;
         border-radius: 8px;
         font-weight: 500;
@@ -69,24 +69,25 @@ custom_css = """
     }
     
     .stButton > button:hover {
-        box-shadow: 0 4px 8px rgba(25, 118, 210, 0.2);
+        background: #1565c0;
+        box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
         transform: translateY(-2px);
     }
     
     /* Markdown text in sidebar */
     [data-testid="stSidebar"] .stMarkdown {
-        color: #263238;
+        color: #212121;
+    }
+    
+    /* Main text */
+    body, p {
+        color: #212121 !important;
     }
     
     /* Container styling */
     .stContainer {
         border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-    
-    /* Text colors */
-    body {
-        color: #37474f;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 </style>
 """
