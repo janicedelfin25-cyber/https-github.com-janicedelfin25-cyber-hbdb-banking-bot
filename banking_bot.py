@@ -299,18 +299,128 @@ with st.sidebar:
     
     st.markdown("<hr style='border: 1px solid #bb86fc; margin: 15px 0;'>", unsafe_allow_html=True)
     
-    # Services - Clickable Expanders
+    # Services - Clickable Expanders with Helpful Details
     st.markdown("<h3 style='color: #bb86fc;'>✨ Services Available</h3>", unsafe_allow_html=True)
     
     services_details = {
-        "💳 Savings & Checking Accounts": "Open new accounts online or at branch. Multiple account types with competitive rates. Minimum balance requirements vary by account type. Free online banking included.",
-        "💰 Credit Cards & Rewards": "Multiple card tiers with cashback, travel points, and rewards. Apply online instantly. Flexible credit limits. Exclusive cardholder benefits and discounts.",
-        "📱 Mobile & Online Banking": "24/7 secure access via mobile app and web portal. Real-time account monitoring. Mobile deposits and transfers. Biometric security available.",
-        "💸 Money Transfers & Payments": "Domestic and international wire transfers. Bill pay services. ACH transfers. Same-day processing available. Competitive transfer rates.",
-        "🏠 Loans & Mortgages": "Personal loans with flexible terms. Home mortgages with competitive rates. Business loans for entrepreneurs. Pre-qualification available online.",
-        "📈 Investment & Wealth Management": "Investment portfolio management. Retirement planning services. Financial advisory services. Tax-efficient investment strategies.",
-        "🎁 Premium Banking Programs": "HBDB Premier with exclusive benefits. Wealth management and global support. Priority customer service. Exclusive event access.",
-        "💼 Business Banking Solutions": "Business checking and savings. Merchant services. Payroll processing. Business loans and lines of credit."
+        "💳 Savings & Checking Accounts": 
+            "**PROBLEM SOLVED:** Need a safe place to save money or pay bills?\n\n"
+            "**WHAT IT DOES:**\n"
+            "• Secure account to deposit & withdraw money\n"
+            "• Interest earned on savings\n"
+            "• Debit card for easy payments\n"
+            "• Online access 24/7\n\n"
+            "**HOW TO GET STARTED:**\n"
+            "1. Visit www.hbdb.com or call 1-800-HBDB-101\n"
+            "2. Choose account type (Savings or Checking)\n"
+            "3. Provide basic info & ID verification\n"
+            "4. Fund your account (minimum $100-$5000)\n"
+            "5. Start using immediately!\n\n"
+            "**WHY CHOOSE HBDB:** Competitive rates, no hidden fees, mobile app included",
+        
+        "💰 Credit Cards & Rewards": 
+            "**PROBLEM SOLVED:** Build credit history and earn rewards?\n\n"
+            "**WHAT IT DOES:**\n"
+            "• Borrow money with flexible repayment\n"
+            "• Earn cashback or travel points\n"
+            "• Build credit history (improves your credit score)\n"
+            "• Purchase protection & fraud coverage\n"
+            "• Exclusive cardholder benefits\n\n"
+            "**HOW TO GET STARTED:**\n"
+            "1. Check eligibility (credit score 600+)\n"
+            "2. Apply online (instant decision)\n"
+            "3. Receive card in 7-10 business days\n"
+            "4. Activate & start earning rewards\n\n"
+            "**REWARDS:** 1-2% cashback or 1 point per $1 spent",
+        
+        "📱 Mobile & Online Banking": 
+            "**PROBLEM SOLVED:** Bank anytime, anywhere without branches?\n\n"
+            "**WHAT IT DOES:**\n"
+            "• Access account from phone/computer\n"
+            "• Transfer money instantly\n"
+            "• Pay bills automatically\n"
+            "• Deposit checks via mobile camera\n"
+            "• Real-time transaction notifications\n\n"
+            "**SECURITY FEATURES:**\n"
+            "• Biometric login (fingerprint/face)\n"
+            "• Encryption & fraud monitoring\n"
+            "• Password protection\n\n"
+            "**HOW TO USE:** Download HBDB app → Sign in → Full account access",
+        
+        "💸 Money Transfers & Payments": 
+            "**PROBLEM SOLVED:** Send money fast to family/businesses?\n\n"
+            "**TRANSFER OPTIONS:**\n"
+            "• Domestic transfers (same-day processing)\n"
+            "• International wire (to 150+ countries)\n"
+            "• Bill payments (auto-pay available)\n"
+            "• ACH transfers (free)\n"
+            "• Mobile wallet (Venmo, PayPal linked)\n\n"
+            "**FEES:**\n"
+            "• Domestic: $0-$15 (depends on method)\n"
+            "• International: $35-$50\n"
+            "• Domestic ACH: FREE\n\n"
+            "**FASTEST METHOD:** Same-day domestic via online banking (1-2 hours)",
+        
+        "🏠 Loans & Mortgages": 
+            "**PROBLEM SOLVED:** Need funds for major purchases or emergencies?\n\n"
+            "**LOAN TYPES:**\n"
+            "• Personal loans ($1,000-$50,000)\n"
+            "• Home mortgages (5-30 year terms)\n"
+            "• Business loans (for entrepreneurs)\n"
+            "• Auto loans (for vehicles)\n"
+            "• Lines of credit (flexible access)\n\n"
+            "**APPROVAL PROCESS (3-5 days):**\n"
+            "1. Pre-qualify online (soft credit check)\n"
+            "2. Provide documents (pay stubs, ID)\n"
+            "3. Final approval decision\n"
+            "4. Funds received in account\n\n"
+            "**RATES:** From 5.99% APR (depends on credit score)",
+        
+        "📈 Investment & Wealth Management": 
+            "**PROBLEM SOLVED:** Build wealth & plan for retirement?\n\n"
+            "**SERVICES:**\n"
+            "• Investment portfolio management\n"
+            "• Retirement planning (IRA, 401k)\n"
+            "• Financial advisory (personalized)\n"
+            "• Tax-efficient investments\n"
+            "• Estate planning assistance\n\n"
+            "**WHO SHOULD USE:** Anyone with $10,000+ to invest\n\n"
+            "**HOW TO START:**\n"
+            "1. Meet with advisor (free consultation)\n"
+            "2. Discuss goals & risk tolerance\n"
+            "3. Create custom investment strategy\n"
+            "4. Begin investing with expert guidance\n\n"
+            "**EXPECTED RETURNS:** 6-10% annually (varies by strategy)",
+        
+        "🎁 Premium Banking Programs": 
+            "**PROBLEM SOLVED:** Want exclusive perks & dedicated support?\n\n"
+            "**HBDB PREMIER (Premium Tier):**\n"
+            "• Dedicated personal banker (24/7)\n"
+            "• Concierge service\n"
+            "• Waived fees on all products\n"
+            "• Priority customer support\n"
+            "• Exclusive event invitations\n"
+            "• Travel & insurance benefits\n\n"
+            "**REQUIREMENTS:**\n"
+            "• Minimum balance: $50,000\n"
+            "• Average monthly: $30,000+\n\n"
+            "**BENEFITS:** Save $500-$2000/year in fees alone",
+        
+        "💼 Business Banking Solutions": 
+            "**PROBLEM SOLVED:** Manage business finances easily?\n\n"
+            "**FOR SMALL BUSINESS OWNERS:**\n"
+            "• Business checking & savings\n"
+            "• Merchant card processing\n"
+            "• Payroll processing service\n"
+            "• Business loans & lines of credit\n"
+            "• Invoice financing\n"
+            "• Business credit card\n\n"
+            "**WHY IT HELPS:**\n"
+            "• Separate business & personal finances (tax benefit)\n"
+            "• Faster payments from customers\n"
+            "• Easier payroll management\n"
+            "• Build business credit\n\n"
+            "**SETUP:** 5 minutes online with business license & ID"
     }
     
     for service, details in services_details.items():
@@ -319,49 +429,84 @@ with st.sidebar:
     
     st.markdown("<hr style='border: 1px solid #bb86fc; margin: 15px 0;'>", unsafe_allow_html=True)
     
-    # Account Types - Clickable Expanders
+    # Account Types - Clickable Expanders with detailed guidance
     st.markdown("<h3 style='color: #bb86fc;'>🎯 Account Types</h3>", unsafe_allow_html=True)
     
     accounts_details = {
         "🔵 Basic Savings": 
-            "**Features:**\n"
-            "• Low minimum balance ($100)\n"
-            "• Standard interest rates\n"
-            "• Free debit card\n"
-            "• Online banking access\n"
-            "• Perfect for beginners",
+            "**BEST FOR:** Students, beginners, or those building emergency fund\n\n"
+            "**KEY FEATURES:**\n"
+            "• Minimum balance: $100 only\n"
+            "• Interest rate: 0.2-0.4% APY\n"
+            "• No monthly fees\n"
+            "• Free debit card included\n"
+            "• 6 free withdrawals/month\n\n"
+            "**PROS:**\n"
+            "✓ Easy to open (online in 5 min)\n"
+            "✓ No hidden fees\n"
+            "✓ Perfect to start saving\n\n"
+            "**WHEN TO UPGRADE:** When balance reaches $5,000",
         
         "🟢 Premium Savings": 
-            "**Features:**\n"
-            "• Higher interest rates (0.8-1.2% APY)\n"
-            "• Minimum balance $5,000\n"
-            "• Priority customer service\n"
-            "• Free checks\n"
-            "• Monthly rewards",
+            "**BEST FOR:** Regular savers wanting higher returns\n\n"
+            "**KEY FEATURES:**\n"
+            "• Minimum balance: $5,000\n"
+            "• Interest rate: 0.8-1.2% APY (5x better!)\n"
+            "• Free checks included\n"
+            "• Priority support\n"
+            "• Monthly bonus interest on high balance\n\n"
+            "**REAL EXAMPLE:**\n"
+            "• Deposit: $10,000\n"
+            "• Annual interest: ~$100-120\n"
+            "• Basic account would earn: ~$20-40\n\n"
+            "**COST SAVINGS:** Extra $60-80/year just from interest!",
         
         "👑 HBDB Premier": 
-            "**Features:**\n"
-            "• Exclusive member benefits\n"
-            "• Premium wealth management\n"
-            "• Global travel support\n"
-            "• Dedicated personal banker\n"
-            "• Minimum balance $50,000",
+            "**BEST FOR:** High-income individuals, executives, business owners\n\n"
+            "**EXCLUSIVE BENEFITS:**\n"
+            "• Dedicated personal banker (call 24/7)\n"
+            "• Concierge service\n"
+            "• Premium interest rates\n"
+            "• All fees waived\n"
+            "• Free priority customer service\n"
+            "• Exclusive travel deals & insurance\n"
+            "• Free financial planning\n\n"
+            "**FINANCIAL IMPACT:**\n"
+            "• Save $500-2000/year in fees\n"
+            "• Higher interest on savings\n"
+            "• Lower rates on loans\n\n"
+            "**REQUIREMENT:** Minimum $50,000 balance",
         
         "⭐ HBDB Advance": 
-            "**Features:**\n"
-            "• Preferential rates on loans\n"
-            "• Dedicated support team\n"
-            "• Package deals available\n"
-            "• Investment advisory included\n"
-            "• Minimum balance $10,000",
+            "**BEST FOR:** Professionals, growing families, business managers\n\n"
+            "**PREFERENTIAL RATES:**\n"
+            "• Better mortgage rates (up to 0.5% lower)\n"
+            "• Lower credit card APR\n"
+            "• Reduced loan origination fees\n"
+            "• Higher savings interest\n\n"
+            "**DEDICATED SUPPORT:**\n"
+            "• Assigned relationship manager\n"
+            "• Free financial health check\n"
+            "• Quarterly portfolio review\n\n"
+            "**SAVINGS EXAMPLE:**\n"
+            "• $200,000 mortgage at 0.5% lower = $1000/year savings\n"
+            "• Higher savings interest = $200+/year\n\n"
+            "**REQUIREMENT:** Minimum $10,000 balance",
         
         "💼 Business Account": 
-            "**Features:**\n"
-            "• Business checking & savings\n"
-            "• Merchant services\n"
-            "• Payroll processing\n"
-            "• Business loans available\n"
-            "• Scalable solutions"
+            "**BEST FOR:** Entrepreneurs, freelancers, small business owners\n\n"
+            "**CRITICAL BENEFITS:**\n"
+            "• Separate business & personal finances (tax deduction!)\n"
+            "• Faster customer payments via merchant services\n"
+            "• Automatic payroll processing\n"
+            "• Build business credit (essential for growth)\n"
+            "• Business-only features & tools\n\n"
+            "**PAYMENT OPTIONS:**\n"
+            "• Accept credit/debit cards (2.5% fee)\n"
+            "• ACH transfers (free)\n"
+            "• Mobile payments\n\n"
+            "**TAX BENEFIT:** Easily track business expenses for deductions\n\n"
+            "**SETUP:** 5 minutes with business license + ID"
     }
     
     for account, details in accounts_details.items():
