@@ -7,12 +7,12 @@ import os
 api_key = "aM92yjrlBPbRPqOYKkNFBZnjXhU6R01y"
 client = Mistral(api_key=api_key)
 
-# Custom CSS styling - Clean and Readable
+# Custom CSS styling - Blue theme with good readability
 custom_css = """
 <style>
-    /* Main background - Clean white */
+    /* Main background - Dark blue */
     .stApp {
-        background: #ffffff;
+        background: linear-gradient(135deg, #0d1b2a 0%, #1a2a3d 100%);
     }
     
     /* Chat message styling */
@@ -22,45 +22,45 @@ custom_css = """
         margin-bottom: 8px;
     }
     
-    /* User message - Light blue background */
+    /* User message - Medium blue */
     .stChatMessage[data-testid="user-message"] {
-        background: #e3f2fd;
-        color: #0d47a1;
-        border-left: 4px solid #1976d2;
+        background: #1e3a5f;
+        color: #e3f2fd;
+        border-left: 4px solid #42a5f5;
     }
     
-    /* Assistant message - Light green background */
+    /* Assistant message - Teal blue */
     .stChatMessage[data-testid="assistant-message"] {
-        background: #f1f8e9;
-        color: #1b5e20;
-        border-left: 4px solid #388e3c;
+        background: #0f4c75;
+        color: #e0f7ff;
+        border-left: 4px solid #00bcd4;
     }
     
     /* Input area */
     .stChatInput {
         border-radius: 12px;
-        border: 1px solid #90caf9;
-        background-color: #ffffff;
+        border: 2px solid #42a5f5;
+        background-color: #1a2a3d;
         padding: 12px;
-        color: #212121;
+        color: #e3f2fd;
     }
     
-    /* Sidebar styling - Light background */
+    /* Sidebar styling - Dark blue */
     [data-testid="stSidebar"] {
-        background: #f5f5f5;
-        color: #212121;
+        background: linear-gradient(180deg, #0d1b2a 0%, #1a2a3d 100%);
+        color: #e3f2fd;
     }
     
     /* Headers */
     h1, h2, h3 {
-        color: #1976d2;
+        color: #42a5f5;
         font-weight: 600;
     }
     
     /* Button styling */
     .stButton > button {
-        background: #1976d2;
-        color: white;
+        background: #2196f3;
+        color: #ffffff;
         border: none;
         border-radius: 8px;
         font-weight: 500;
@@ -69,25 +69,30 @@ custom_css = """
     }
     
     .stButton > button:hover {
-        background: #1565c0;
-        box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+        background: #1976d2;
+        box-shadow: 0 4px 8px rgba(33, 150, 243, 0.4);
         transform: translateY(-2px);
     }
     
     /* Markdown text in sidebar */
     [data-testid="stSidebar"] .stMarkdown {
-        color: #212121;
+        color: #e3f2fd;
     }
     
     /* Main text */
     body, p {
-        color: #212121 !important;
+        color: #e3f2fd !important;
     }
     
     /* Container styling */
     .stContainer {
         border-radius: 12px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(66, 165, 245, 0.2);
+    }
+    
+    /* Dividers */
+    hr {
+        border-color: #42a5f5 !important;
     }
 </style>
 """
