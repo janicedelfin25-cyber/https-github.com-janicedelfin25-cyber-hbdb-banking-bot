@@ -7,12 +7,12 @@ import os
 api_key = "aM92yjrlBPbRPqOYKkNFBZnjXhU6R01y"
 client = Mistral(api_key=api_key)
 
-# Custom CSS styling - Blue theme with good readability
+# Custom CSS styling - Grey theme with good readability
 custom_css = """
 <style>
-    /* Main background - Dark blue */
+    /* Main background - Medium grey */
     .stApp {
-        background: linear-gradient(135deg, #0d1b2a 0%, #1a2a3d 100%);
+        background: #4a4a4a;
     }
     
     /* Chat message styling */
@@ -22,14 +22,14 @@ custom_css = """
         margin-bottom: 8px;
     }
     
-    /* User message - Lighter blue */
+    /* User message - Light blue */
     .stChatMessage[data-testid="user-message"] {
         background: #2a5a8a;
         color: #ffffff;
         border-left: 4px solid #64b5f6;
     }
     
-    /* Assistant message - Lighter teal blue */
+    /* Assistant message - Light teal blue */
     .stChatMessage[data-testid="assistant-message"] {
         background: #1a6a8a;
         color: #ffffff;
@@ -40,14 +40,14 @@ custom_css = """
     .stChatInput {
         border-radius: 12px;
         border: 2px solid #42a5f5;
-        background-color: #1a2a3d;
+        background-color: #3a3a3a;
         padding: 12px;
         color: #e3f2fd;
     }
     
-    /* Sidebar styling - Dark blue */
+    /* Sidebar styling - Dark grey */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0d1b2a 0%, #1a2a3d 100%);
+        background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 100%);
         color: #e3f2fd;
     }
     
