@@ -267,58 +267,100 @@ with st.sidebar:
     st.markdown("<h2 style='color: #bb86fc; text-align: center;'>📋 HBDB Banking</h2>", unsafe_allow_html=True)
     st.markdown("<hr style='border: 2px solid #bb86fc;'>", unsafe_allow_html=True)
     
-    # Create interactive tabs for sidebar
-    tab1, tab2, tab3, tab4 = st.tabs(["🏦 Bank", "✨ Services", "🎯 Accounts", "📊 Info"])
+    # Bank Info Section
+    st.markdown("<h3 style='color: #bb86fc;'>🏦 Bank Information</h3>", unsafe_allow_html=True)
+    st.markdown("**HBDB - Heritage Business Development Bank**")
+    st.markdown("📞 **24/7 Support:** 1-800-HBDB-101")
+    st.markdown("📧 **Email:** support@hbdb.com")
+    st.markdown("🌐 **Website:** www.hbdb.com")
+    st.markdown("📍 **Multiple International Branches**")
     
-    with tab1:
-        st.markdown("**HBDB - Heritage Business Development Bank**")
-        st.markdown("📞 **24/7 Support:** 1-800-HBDB-101")
-        st.markdown("📧 **Email:** support@hbdb.com")
-        st.markdown("🌐 **Website:** www.hbdb.com")
-        st.markdown("📍 **Multiple International Branches**")
+    st.markdown("<hr style='border: 1px solid #bb86fc; margin: 15px 0;'>", unsafe_allow_html=True)
     
-    with tab2:
-        services = [
-            "💳 Savings & Checking Accounts",
-            "💰 Credit Cards & Rewards",
-            "📱 Mobile & Online Banking",
-            "💸 Money Transfers & Payments",
-            "🏠 Loans & Mortgages",
-            "📈 Investment & Wealth Management",
-            "🎁 Premium Banking Programs",
-            "💼 Business Banking Solutions"
-        ]
-        for service in services:
-            st.markdown(f"✓ {service}")
+    # Services - Clickable Expanders
+    st.markdown("<h3 style='color: #bb86fc;'>✨ Services Available</h3>", unsafe_allow_html=True)
     
-    with tab3:
-        st.markdown("**🔵 Basic Savings**")
-        st.markdown("Low minimum balance, standard rates")
-        st.markdown("---")
-        st.markdown("**🟢 Premium Savings**")
-        st.markdown("Higher rates, competitive minimums")
-        st.markdown("---")
-        st.markdown("**👑 HBDB Premier**")
-        st.markdown("Exclusive benefits, wealth management")
-        st.markdown("---")
-        st.markdown("**⭐ HBDB Advance**")
-        st.markdown("Preferential rates, dedicated support")
-        st.markdown("---")
-        st.markdown("**💼 Business**")
-        st.markdown("Tailored for entrepreneurs")
+    services_details = {
+        "💳 Savings & Checking Accounts": "Open new accounts online or at branch. Multiple account types with competitive rates. Minimum balance requirements vary by account type. Free online banking included.",
+        "💰 Credit Cards & Rewards": "Multiple card tiers with cashback, travel points, and rewards. Apply online instantly. Flexible credit limits. Exclusive cardholder benefits and discounts.",
+        "📱 Mobile & Online Banking": "24/7 secure access via mobile app and web portal. Real-time account monitoring. Mobile deposits and transfers. Biometric security available.",
+        "💸 Money Transfers & Payments": "Domestic and international wire transfers. Bill pay services. ACH transfers. Same-day processing available. Competitive transfer rates.",
+        "🏠 Loans & Mortgages": "Personal loans with flexible terms. Home mortgages with competitive rates. Business loans for entrepreneurs. Pre-qualification available online.",
+        "📈 Investment & Wealth Management": "Investment portfolio management. Retirement planning services. Financial advisory services. Tax-efficient investment strategies.",
+        "🎁 Premium Banking Programs": "HBDB Premier with exclusive benefits. Wealth management and global support. Priority customer service. Exclusive event access.",
+        "💼 Business Banking Solutions": "Business checking and savings. Merchant services. Payroll processing. Business loans and lines of credit."
+    }
     
-    with tab4:
-        col1, col2 = st.columns(2)
-        with col1:
-            st.metric("FAQs", len(faq_df))
-        with col2:
-            st.metric("AI Model", "Mistral")
-        st.markdown("⚡ **Response:** Instant")
-        st.markdown("🔒 **Security:** Bank-Grade")
+    for service, details in services_details.items():
+        with st.expander(service):
+            st.markdown(details)
+    
+    st.markdown("<hr style='border: 1px solid #bb86fc; margin: 15px 0;'>", unsafe_allow_html=True)
+    
+    # Account Types - Clickable Expanders
+    st.markdown("<h3 style='color: #bb86fc;'>🎯 Account Types</h3>", unsafe_allow_html=True)
+    
+    accounts_details = {
+        "🔵 Basic Savings": 
+            "**Features:**\n"
+            "• Low minimum balance ($100)\n"
+            "• Standard interest rates\n"
+            "• Free debit card\n"
+            "• Online banking access\n"
+            "• Perfect for beginners",
+        
+        "🟢 Premium Savings": 
+            "**Features:**\n"
+            "• Higher interest rates (0.8-1.2% APY)\n"
+            "• Minimum balance $5,000\n"
+            "• Priority customer service\n"
+            "• Free checks\n"
+            "• Monthly rewards",
+        
+        "👑 HBDB Premier": 
+            "**Features:**\n"
+            "• Exclusive member benefits\n"
+            "• Premium wealth management\n"
+            "• Global travel support\n"
+            "• Dedicated personal banker\n"
+            "• Minimum balance $50,000",
+        
+        "⭐ HBDB Advance": 
+            "**Features:**\n"
+            "• Preferential rates on loans\n"
+            "• Dedicated support team\n"
+            "• Package deals available\n"
+            "• Investment advisory included\n"
+            "• Minimum balance $10,000",
+        
+        "💼 Business Account": 
+            "**Features:**\n"
+            "• Business checking & savings\n"
+            "• Merchant services\n"
+            "• Payroll processing\n"
+            "• Business loans available\n"
+            "• Scalable solutions"
+    }
+    
+    for account, details in accounts_details.items():
+        with st.expander(account):
+            st.markdown(details)
+    
+    st.markdown("<hr style='border: 1px solid #bb86fc; margin: 15px 0;'>", unsafe_allow_html=True)
+    
+    # Quick Info
+    st.markdown("<h3 style='color: #bb86fc;'>📊 Quick Info</h3>", unsafe_allow_html=True)
+    col1, col2 = st.columns(2)
+    with col1:
+        st.metric("FAQs", len(faq_df))
+    with col2:
+        st.metric("AI Model", "Mistral")
+    st.markdown("⚡ **Response:** Instant")
+    st.markdown("🔒 **Security:** Bank-Grade")
     
     st.markdown("<hr style='border: 1px solid #bb86fc; margin: 20px 0;'>", unsafe_allow_html=True)
     
-    # Clickable buttons
+    # Quick Actions
     st.markdown("<h3 style='color: #bb86fc;'>⚡ Quick Actions</h3>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
