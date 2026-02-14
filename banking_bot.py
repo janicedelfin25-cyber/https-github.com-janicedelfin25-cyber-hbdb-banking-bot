@@ -264,69 +264,62 @@ if user_input := st.chat_input("💬 Ask me anything about HBDB banking services
 
 # Sidebar info
 with st.sidebar:
-    st.markdown("<h2 style='color: white; text-align: center;'>📋 HBDB Banking Assistant</h2>", unsafe_allow_html=True)
-    st.markdown("<hr style='border: 2px solid rgba(255,255,255,0.3);'>", unsafe_allow_html=True)
+    st.markdown("<h2 style='color: #bb86fc; text-align: center;'>📋 HBDB Banking</h2>", unsafe_allow_html=True)
+    st.markdown("<hr style='border: 2px solid #bb86fc;'>", unsafe_allow_html=True)
     
-    # Bank Information
-    st.markdown("<h3 style='color: #f093fb; font-size: 18px;'>🏦 Bank Information</h3>", unsafe_allow_html=True)
-    st.markdown("""
-    <div style='background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; border-left: 4px solid #f093fb; font-size: 13px; color: white; line-height: 1.8;'>
-    <strong>HBDB - Heritage Business Development Bank</strong><br>
-    📞 <strong>24/7 Support:</strong> 1-800-HBDB-101<br>
-    📧 <strong>Email:</strong> support@hbdb.com<br>
-    🌐 <strong>Website:</strong> www.hbdb.com<br>
-    📍 <strong>Multiple International Branches</strong>
-    </div>
-    """, unsafe_allow_html=True)
+    # Create interactive tabs for sidebar
+    tab1, tab2, tab3, tab4 = st.tabs(["🏦 Bank", "✨ Services", "🎯 Accounts", "📊 Info"])
     
-    st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.2); margin: 15px 0;'>", unsafe_allow_html=True)
+    with tab1:
+        st.markdown("**HBDB - Heritage Business Development Bank**")
+        st.markdown("📞 **24/7 Support:** 1-800-HBDB-101")
+        st.markdown("📧 **Email:** support@hbdb.com")
+        st.markdown("🌐 **Website:** www.hbdb.com")
+        st.markdown("📍 **Multiple International Branches**")
     
-    # Services
-    st.markdown("<h3 style='color: #f093fb; font-size: 18px;'>✨ Services Available</h3>", unsafe_allow_html=True)
-    services = [
-        "💳 Savings & Checking Accounts",
-        "💰 Credit Cards & Rewards",
-        "📱 Mobile & Online Banking",
-        "💸 Money Transfers & Payments",
-        "🏠 Loans & Mortgages",
-        "📈 Investment & Wealth Management",
-        "🎁 Premium Banking Programs",
-        "💼 Business Banking Solutions"
-    ]
-    for service in services:
-        st.markdown(f"<p style='color: #e0e0e0; font-size: 13px; margin: 8px 0;'>{service}</p>", unsafe_allow_html=True)
+    with tab2:
+        services = [
+            "💳 Savings & Checking Accounts",
+            "💰 Credit Cards & Rewards",
+            "📱 Mobile & Online Banking",
+            "💸 Money Transfers & Payments",
+            "🏠 Loans & Mortgages",
+            "📈 Investment & Wealth Management",
+            "🎁 Premium Banking Programs",
+            "💼 Business Banking Solutions"
+        ]
+        for service in services:
+            st.markdown(f"✓ {service}")
     
-    st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.2); margin: 15px 0;'>", unsafe_allow_html=True)
+    with tab3:
+        st.markdown("**🔵 Basic Savings**")
+        st.markdown("Low minimum balance, standard rates")
+        st.markdown("---")
+        st.markdown("**🟢 Premium Savings**")
+        st.markdown("Higher rates, competitive minimums")
+        st.markdown("---")
+        st.markdown("**👑 HBDB Premier**")
+        st.markdown("Exclusive benefits, wealth management")
+        st.markdown("---")
+        st.markdown("**⭐ HBDB Advance**")
+        st.markdown("Preferential rates, dedicated support")
+        st.markdown("---")
+        st.markdown("**💼 Business**")
+        st.markdown("Tailored for entrepreneurs")
     
-    # Account Types
-    st.markdown("<h3 style='color: #f093fb; font-size: 18px;'>🎯 Account Types</h3>", unsafe_allow_html=True)
-    account_types = {
-        "🔵 Basic Savings": "Low minimum balance, standard rates",
-        "🟢 Premium Savings": "Higher rates, competitive minimums",
-        "👑 HBDB Premier": "Exclusive benefits, wealth management",
-        "⭐ HBDB Advance": "Preferential rates, dedicated support",
-        "💼 Business": "Tailored for entrepreneurs"
-    }
-    for acc_type, desc in account_types.items():
-        st.markdown(f"<p style='color: #e0e0e0; font-size: 12px; margin: 8px 0;'><strong>{acc_type}</strong><br><span style='color: #b0b0b0; font-size: 11px;'>{desc}</span></p>", unsafe_allow_html=True)
+    with tab4:
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("FAQs", len(faq_df))
+        with col2:
+            st.metric("AI Model", "Mistral")
+        st.markdown("⚡ **Response:** Instant")
+        st.markdown("🔒 **Security:** Bank-Grade")
     
-    st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.2); margin: 15px 0;'>", unsafe_allow_html=True)
+    st.markdown("<hr style='border: 1px solid #bb86fc; margin: 20px 0;'>", unsafe_allow_html=True)
     
-    # Quick Info
-    st.markdown("<h3 style='color: #f093fb; font-size: 18px;'>📊 Quick Info</h3>", unsafe_allow_html=True)
-    st.markdown(f"""
-    <div style='background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-size: 13px; color: #e0e0e0;'>
-    <p>✅ <strong>FAQs Available:</strong> <span style='color: #f093fb;'>{len(faq_df)}</span></p>
-    <p>🤖 <strong>AI Model:</strong> Mistral Large</p>
-    <p>⚡ <strong>Response Time:</strong> Instant</p>
-    <p>🔒 <strong>Security:</strong> Bank-Grade Encryption</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.2); margin: 15px 0;'>", unsafe_allow_html=True)
-    
-    # Features
-    st.markdown("<h3 style='color: #f093fb; font-size: 18px;'>🎁 Features</h3>", unsafe_allow_html=True)
+    # Clickable buttons
+    st.markdown("<h3 style='color: #bb86fc;'>⚡ Quick Actions</h3>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         if st.button("💡 Examples", use_container_width=True, key="btn_examples"):
@@ -338,7 +331,7 @@ with st.sidebar:
             - What is HBDB Premier?
             """)
     with col2:
-        if st.button("❓ Contact", use_container_width=True, key="btn_contact"):
+        if st.button("📞 Contact", use_container_width=True, key="btn_contact"):
             st.info("""
             **Get help from our team:**
             📞 1-800-HBDB-101
@@ -346,11 +339,8 @@ with st.sidebar:
             💬 Chat with specialist
             """)
     
-    st.markdown("<hr style='border: 1px solid rgba(255,255,255,0.2); margin: 15px 0;'>", unsafe_allow_html=True)
-    
-    # Actions
-    if st.button("🔄 Clear Chat History", use_container_width=True, key="btn_clear"):
+    if st.button("🔄 Clear Chat", use_container_width=True, key="btn_clear"):
         st.session_state.messages = []
         st.rerun()
     
-    st.markdown("<p style='color: #b0b0b0; font-size: 11px; text-align: center; margin-top: 20px;'>Version 1.0 | Powered by Mistral AI<br>HBDB Banking Assistant</p>", unsafe_allow_html=True)
+    st.markdown("<p style='color: #bb86fc; font-size: 11px; text-align: center; margin-top: 20px;'>v1.0 | Mistral AI</p>", unsafe_allow_html=True)
