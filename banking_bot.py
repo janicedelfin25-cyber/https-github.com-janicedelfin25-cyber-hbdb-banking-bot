@@ -97,6 +97,28 @@ custom_css = """
     .stText {
         color: #ffffff !important;
     }
+    
+    /* Links and hyperlinks - Make them bright yellow for visibility */
+    a {
+        color: #ffeb3b !important;
+        text-decoration: underline;
+    }
+    
+    a:visited {
+        color: #ffeb3b !important;
+    }
+    
+    a:hover {
+        color: #fff59d !important;
+    }
+    
+    /* Email and URL text styling */
+    code {
+        color: #ffeb3b !important;
+        background-color: rgba(255, 235, 59, 0.1) !important;
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
 </style>
 """
 
