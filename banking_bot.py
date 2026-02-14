@@ -22,18 +22,18 @@ custom_css = """
         margin-bottom: 8px;
     }
     
-    /* User message - Medium blue */
+    /* User message - Lighter blue */
     .stChatMessage[data-testid="user-message"] {
-        background: #1e3a5f;
-        color: #e3f2fd;
-        border-left: 4px solid #42a5f5;
+        background: #2a5a8a;
+        color: #ffffff;
+        border-left: 4px solid #64b5f6;
     }
     
-    /* Assistant message - Teal blue */
+    /* Assistant message - Lighter teal blue */
     .stChatMessage[data-testid="assistant-message"] {
-        background: #0f4c75;
-        color: #e0f7ff;
-        border-left: 4px solid #00bcd4;
+        background: #1a6a8a;
+        color: #ffffff;
+        border-left: 4px solid #4dd0e1;
     }
     
     /* Input area */
