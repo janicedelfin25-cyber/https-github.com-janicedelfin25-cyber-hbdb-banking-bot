@@ -79,20 +79,23 @@ custom_css = """
         color: #ffffff;
     }
     
-    /* Main text */
-    body, p {
+    /* Main text - ALL WHITE */
+    body, p, span, div, label {
         color: #ffffff !important;
     }
     
-    /* Container styling */
-    .stContainer {
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(187, 134, 252, 0.3);
+    /* Markdown text in sidebar */
+    [data-testid="stSidebar"] .stMarkdown {
+        color: #ffffff !important;
     }
     
-    /* Dividers */
-    hr {
-        border-color: #bb86fc !important;
+    /* All text elements */
+    .stMarkdown {
+        color: #ffffff !important;
+    }
+    
+    .stText {
+        color: #ffffff !important;
     }
 </style>
 """
